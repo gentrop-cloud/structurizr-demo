@@ -1,0 +1,186 @@
+{
+  "configuration" : { },
+  "description" : "Description",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedDate" : "2024-08-01T13:41:47Z",
+  "model" : {
+    "people" : [ {
+      "description" : "The Gentrop team to manage the licenses",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Gentrop",
+      "properties" : {
+        "structurizr.dsl.identifier" : "admin"
+      },
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "4",
+        "id" : "8",
+        "properties" : {
+          "structurizr.dsl.identifier" : "0f79ef3f-0b92-448f-91f2-2af50d456916"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Application User",
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "User",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "3",
+        "id" : "7",
+        "properties" : {
+          "structurizr.dsl.identifier" : "f8906659-1a7a-48ad-9db0-1e2ce9b2b112"
+        },
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "The Slack Application",
+      "documentation" : { },
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Slack App",
+      "properties" : {
+        "structurizr.dsl.identifier" : "slackapp"
+      },
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "6",
+        "id" : "10",
+        "properties" : {
+          "structurizr.dsl.identifier" : "74b84de6-0400-41bf-a5e5-befc028300db"
+        },
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "containers" : [ {
+        "documentation" : { },
+        "id" : "5",
+        "name" : "Database Schema",
+        "properties" : {
+          "structurizr.dsl.identifier" : "db"
+        },
+        "tags" : "Element,Container,Database"
+      } ],
+      "description" : "The frontend for admins",
+      "documentation" : { },
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "App Pages",
+      "properties" : {
+        "structurizr.dsl.identifier" : "appportal"
+      },
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "6",
+        "id" : "9",
+        "properties" : {
+          "structurizr.dsl.identifier" : "66d59aa8-455c-4e37-8dd9-03fec65fbca7"
+        },
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "The API application",
+      "documentation" : { },
+      "id" : "6",
+      "location" : "Unspecified",
+      "name" : "API App",
+      "properties" : {
+        "structurizr.dsl.identifier" : "appapi"
+      },
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Demo",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICAiRGVtbyIgIHsKCiAgICBtb2RlbCB7CiAgICAgICAgYWRtaW4gPSBwZXJzb24gIkdlbnRyb3AiICJUaGUgR2VudHJvcCB0ZWFtIHRvIG1hbmFnZSB0aGUgbGljZW5zZXMiCiAgICAgICAgdXNlciA9IHBlcnNvbiAiVXNlciIgIkFwcGxpY2F0aW9uIFVzZXIiCiAgICAgICAgCgogICAgICAgIHNsYWNrQXBwID0gc29mdHdhcmVTeXN0ZW0gIlNsYWNrIEFwcCIgIlRoZSBTbGFjayBBcHBsaWNhdGlvbiIgCiAgICAgICAgYXBwUG9ydGFsID0gc29mdHdhcmVTeXN0ZW0gIkFwcCBQYWdlcyIgIlRoZSBmcm9udGVuZCBmb3IgYWRtaW5zIiB7CiAgICAgICAgICAgICAgZGIgPSBjb250YWluZXIgIkRhdGFiYXNlIFNjaGVtYSIgewogICAgICAgICAgICAgICAgdGFncyAiRGF0YWJhc2UiCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgYXBwQXBpID0gc29mdHdhcmVTeXN0ZW0gIkFQSSBBcHAiICJUaGUgQVBJIGFwcGxpY2F0aW9uIgoKICAgICAgICB1c2VyIC0+IHNsYWNrQXBwICJVc2VzIgogICAgICAgIGFkbWluIC0+IGFwcFBvcnRhbCAiVXNlcyIKICAgICAgICBhcHBQb3J0YWwgLT4gYXBwQXBpICJVc2VzIgogICAgICAgIHNsYWNrQXBwIC0+IGFwcEFwaSAiVXNlcyIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtTGFuZHNjYXBlICAiU3lzdGVtTGFuZHNjYXBlIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBhcHBQb3J0YWwgIkRpYWdyYW1hUG9ydGFsIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJTb2Z0d2FyZSBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzExNjhiZAogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlBlcnNvbiIgewogICAgICAgICAgICAgICAgc2hhcGUgcGVyc29uCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwODQyN2IKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KICAgIAp9Cg=="
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "DiagramaPortal",
+      "styles" : {
+        "elements" : [ {
+          "background" : "#1168bd",
+          "color" : "#ffffff",
+          "tag" : "Software System"
+        }, {
+          "background" : "#08427b",
+          "color" : "#ffffff",
+          "shape" : "Person",
+          "tag" : "Person"
+        } ]
+      },
+      "terminology" : { }
+    },
+    "containerViews" : [ {
+      "dimensions" : {
+        "height" : 1748,
+        "width" : 2480
+      },
+      "elements" : [ {
+        "id" : "5",
+        "x" : 590,
+        "y" : 295
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "DiagramaPortal",
+      "order" : 2,
+      "paperSize" : "A5_Landscape",
+      "softwareSystemId" : "4"
+    } ],
+    "systemLandscapeViews" : [ {
+      "dimensions" : {
+        "height" : 2000,
+        "width" : 1600
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 85,
+        "y" : 105
+      }, {
+        "id" : "2",
+        "x" : 155,
+        "y" : 1535
+      }, {
+        "id" : "3",
+        "x" : 970,
+        "y" : 1605
+      }, {
+        "id" : "4",
+        "x" : 945,
+        "y" : 140
+      }, {
+        "id" : "6",
+        "x" : 965,
+        "y" : 835
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "SystemLandscape",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "10"
+      }, {
+        "id" : "7"
+      }, {
+        "id" : "8"
+      }, {
+        "id" : "9"
+      } ]
+    } ]
+  }
+}
