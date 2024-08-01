@@ -3,7 +3,7 @@
   "description" : "Description",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2024-08-01T13:41:47Z",
+  "lastModifiedDate" : "2024-08-01T14:35:20Z",
   "model" : {
     "people" : [ {
       "description" : "The Gentrop team to manage the licenses",
@@ -18,7 +18,7 @@
         "destinationId" : "4",
         "id" : "8",
         "properties" : {
-          "structurizr.dsl.identifier" : "0f79ef3f-0b92-448f-91f2-2af50d456916"
+          "structurizr.dsl.identifier" : "53f4b151-bf98-4856-981a-950e9712d91c"
         },
         "sourceId" : "1",
         "tags" : "Relationship"
@@ -37,7 +37,7 @@
         "destinationId" : "3",
         "id" : "7",
         "properties" : {
-          "structurizr.dsl.identifier" : "f8906659-1a7a-48ad-9db0-1e2ce9b2b112"
+          "structurizr.dsl.identifier" : "6d8774dd-d84f-4c9a-a36a-8f6466fa423d"
         },
         "sourceId" : "2",
         "tags" : "Relationship"
@@ -58,7 +58,7 @@
         "destinationId" : "6",
         "id" : "10",
         "properties" : {
-          "structurizr.dsl.identifier" : "74b84de6-0400-41bf-a5e5-befc028300db"
+          "structurizr.dsl.identifier" : "28c8e17a-4ffa-430c-9553-f2083966912d"
         },
         "sourceId" : "3",
         "tags" : "Relationship"
@@ -87,7 +87,7 @@
         "destinationId" : "6",
         "id" : "9",
         "properties" : {
-          "structurizr.dsl.identifier" : "66d59aa8-455c-4e37-8dd9-03fec65fbca7"
+          "structurizr.dsl.identifier" : "48ded58e-0a5d-4e76-bb67-f26b229a4701"
         },
         "sourceId" : "4",
         "tags" : "Relationship"
@@ -112,7 +112,7 @@
   "views" : {
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "DiagramaPortal",
+      "lastSavedView" : "SystemLandscape",
       "styles" : {
         "elements" : [ {
           "background" : "#1168bd",
@@ -150,24 +150,24 @@
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 85,
-        "y" : 105
+        "x" : 132,
+        "y" : 84
       }, {
         "id" : "2",
-        "x" : 155,
-        "y" : 1535
+        "x" : 202,
+        "y" : 1514
       }, {
         "id" : "3",
-        "x" : 970,
-        "y" : 1605
+        "x" : 1017,
+        "y" : 1584
       }, {
         "id" : "4",
-        "x" : 945,
-        "y" : 140
+        "x" : 992,
+        "y" : 119
       }, {
         "id" : "6",
-        "x" : 965,
-        "y" : 835
+        "x" : 1012,
+        "y" : 814
       } ],
       "enterpriseBoundaryVisible" : true,
       "key" : "SystemLandscape",
