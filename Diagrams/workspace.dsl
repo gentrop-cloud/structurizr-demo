@@ -3,31 +3,50 @@ workspace  "Demo"  {
     model {
         admin = person "Gentrop" "The Gentrop team to manage the licenses"
         user = person "User" "Application User"
-        
 
-        slackApp = softwareSystem "Slack App" "The Slack Application" 
-        appPortal = softwareSystem "App Pages" "The frontend for admins" {
-              db = container "Database Schema" {
-                tags "Database"
+        slackApp = softwareSystem "Slack App"
+        appApi = softwareSystem "API App" {
+        }
+        appPortal = softwareSystem "AppPortal" {
+            webApp = container "Web Application" {
+                web = component "Web Browser"{
+                    tags "Browser"
+                }
             }
         }
-        appApi = softwareSystem "API App" "The API application"
-
+        licenses_database = element "Database" "Licenses Repository"{
+                tags "Database"
+            }
+        
         user -> slackApp "Uses"
         admin -> appPortal "Uses"
-        appPortal -> appApi "Uses"
+
+        webApp -> appApi "Uses"
         slackApp -> appApi "Uses"
+        appApi -> licenses_database
     }
 
     views {
-        systemLandscape  "SystemLandscape" {
+        systemlandscape "SystemLandscape" {
             include *
-            
+            autoLayout
         }
 
-        container appPortal "DiagramaPortal" {
+        systemcontext appPortal {
+            include *
+            description "The system context diagram for the API application."
+        }
+
+        container appPortal {
             include *
         }
+
+        component webApp {
+            include *
+        }
+
+
+
         styles {
             element "Software System" {
                 background #1168bd
@@ -38,6 +57,14 @@ workspace  "Demo"  {
                 background #08427b
                 color #ffffff
             }
+            element "Browser" {
+                shape WebBrowser
+                background red
+            }        
+            element "Database"{
+                shape Cylinder
+                background green
+            }    
         }
     }
     
