@@ -1,50 +1,68 @@
-workspace  "Demo"  {
+workspace {
 
     model {
-        admin = person "Gentrop" "The Gentrop team to manage the licenses"
-        user = person "User" "Application User"
 
-        slackApp = softwareSystem "Slack App"
-        appApi = softwareSystem "API App" {
+        customer = person "Customer" "The final customer"
+        user = person "User" "Application User"
+        gentrop = person "Gentrop" "Admins"
+
+        slackApp = softwareSystem "Slack App" {
+            c1 = container "Container 1"
         }
-        appPortal = softwareSystem "AppPortal" {
-            webApp = container "Web Application" {
-                web = component "Web Browser"{
-                    tags "Browser"
-                }
+
+        backend = softwareSystem "BackendApp" {
+            c2 = container "Container 2"
+            licenseapi = container "License API" {
+
             }
+
         }
-        licenses_database = element "Database" "Licenses Repository"{
+        frontend = softwareSystem "FrontendApp" {
+            app = container "Container 2" {
+                
+            }            
+        }
+        licenses_database = element "LicenseDatabase" "Licenses Repository"{
                 tags "Database"
             }
-        
-        user -> slackApp "Uses"
-        admin -> appPortal "Uses"
 
-        webApp -> appApi "Uses"
-        slackApp -> appApi "Uses"
-        appApi -> licenses_database
+        conversations_database = element "ConversationDatabase" "Conversations Repository"{
+                tags "Database"
+            }        
+
+
+        webapp = element "Browser" "WebApp" {
+                    tags "Browser"
+                }
+
+
+        user -> slackApp
+        gentrop -> frontend
+        gentrop -> webapp
+        webapp -> licenseapi
+        customer -> backend
+        backend -> customer
+        frontend -> licenseapi
+        licenseapi -> licenses_database
+
+        slackApp -> backend
     }
 
     views {
+
         systemlandscape "SystemLandscape" {
             include *
-            autoLayout
+            exclude webapp
+            
         }
 
-        systemcontext appPortal {
-            include *
-            description "The system context diagram for the API application."
+        container slackApp {
+            include c1 c2
+            autoLayout lr
         }
-
-        container appPortal {
-            include *
+        container frontend {
+            include gentrop webapp frontend licenseapi licenses_database
         }
-
-        component webApp {
-            include *
-        }
-
 
 
         styles {
@@ -65,7 +83,9 @@ workspace  "Demo"  {
                 shape Cylinder
                 background green
             }    
-        }
+        }   
+
+
     }
-    
+
 }
