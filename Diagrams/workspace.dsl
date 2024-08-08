@@ -7,14 +7,17 @@ workspace {
         gentrop = person "Gentrop" "Admins"
 
         slackApp = softwareSystem "Slack App" {
-            c1 = container "Container 1"
+         reports = container "Reports Section" {}   
+         licenses = container "Licenses Section" {}   
+         incoming = container "Incoming Section" {}   
+         outgoing = container "Outgoing Section" {}   
+
         }
 
         backend = softwareSystem "BackendApp" {
-            c2 = container "Container 2"
             licenseapi = container "License API" {
-
             }
+            metricsapi = container "Metrics API"{}
 
         }
         frontend = softwareSystem "FrontendApp" {
@@ -39,11 +42,14 @@ workspace {
         user -> slackApp
         gentrop -> frontend
         gentrop -> webapp
-        webapp -> licenseapi
         customer -> backend
+
+        webapp -> licenseapi
         backend -> customer
         frontend -> licenseapi
+        
         licenseapi -> licenses_database
+        metricsapi -> conversations_database
 
         slackApp -> backend
     }
@@ -57,11 +63,15 @@ workspace {
         }
 
         container slackApp {
-            include c1 c2
-            autoLayout lr
+            include *
         }
+        
         container frontend {
             include gentrop webapp frontend licenseapi licenses_database
+        }
+
+        container backend {
+            include webapp licenseapi licenses_database metricsapi conversations_database
         }
 
 
