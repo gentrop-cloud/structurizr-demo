@@ -6,11 +6,14 @@ workspace {
         user = person "User" "Application User"
         gentrop = person "Gentrop" "Admins"
 
-        slackApp = softwareSystem "Slack App" {
-         reports = container "Reports Section" {}   
-         licenses = container "Licenses Section" {}   
-         incoming = container "Incoming Section" {}   
-         outgoing = container "Outgoing Section" {}   
+        slackApp = softwareSystem "Slack App" "" {
+         homeApp = container "Home App" {
+            licenses = component "Licenses Section" {}   
+            incoming = component "Incoming Section" {}   
+            outgoing = component "Outgoing Section" {}
+            reports  = component "Reports Section" {}   
+         }   
+
 
         }
 
@@ -39,10 +42,11 @@ workspace {
                 }
 
 
-        user -> slackApp
         gentrop -> frontend
         gentrop -> webapp
         customer -> backend
+
+        user -> homeApp
 
         webapp -> licenseapi
         backend -> customer
