@@ -56,6 +56,7 @@ workspace {
         metricsapi -> conversations_database
 
         slackApp -> backend
+        reports -> metricsApi
     }
 
     views {
@@ -70,6 +71,11 @@ workspace {
             include *
         }
         
+        component homeApp {
+            include *
+        }
+        
+
         container frontend {
             include gentrop webapp frontend licenseapi licenses_database
         }
