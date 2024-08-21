@@ -20,3 +20,14 @@ https://docs.structurizr.com/dsl/tutorial
 
 ## Context - Landscape View
 [WIP]
+
+
+# Docs
+
+## Sample
+https://github.com/chriskn/arch-docs-as-code-example?tab=readme-ov-file
+## Article
+https://www.codecentric.de/wissens-hub/blog/architecture-documentation-docs-as-code-structurizr-asciidoctor
+
+## Another Sample
+https://github.com/arner/arc42-template
